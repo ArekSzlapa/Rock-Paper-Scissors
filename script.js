@@ -27,6 +27,8 @@ const game = () => {
         this.style.animation = "";
       });
     });
+
+    hands.forEach((hand) => {});
     //computer options
     const computerOptions = ["rock", "paper", "scissors"];
 
@@ -36,6 +38,8 @@ const game = () => {
         const computerNumber = Math.floor(Math.random() * 3);
         const computerChoice = computerOptions[computerNumber];
         //Call compare hands
+        playerHand.src = `./assets/rock.png`;
+        computerHand.src = `/assets/rock.png`;
 
         setTimeout(() => {
           compareHands(this.textContent, computerChoice);
